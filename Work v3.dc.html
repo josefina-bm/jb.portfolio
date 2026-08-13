@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+html,body{margin:0;padding:0;overflow:hidden}
+body{background:#F3EFED;-webkit-font-smoothing:antialiased}
+a{color:#231F20;text-decoration:none}
+a:hover{color:#FF5B36}
+</style>
+</helmet>
+<div style="--orange:#FF5B36; --cream:#F3EFED; --ink:#231F20; position:relative; height:100svh; overflow:hidden; background:var(--cream,#F3EFED); font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Text Pro','Neue Haas Grotesk','Neue Haas Unica','Helvetica Neue',Helvetica,Arial,sans-serif; color:var(--ink,#231F20)">
+
+  <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; pointer-events:none; z-index:0">
+    <div>
+      <p style="margin:0; font-size:clamp(40px,7.3vw,140px); line-height:0.98; letter-spacing:-0.03em; color:var(--ink,#231F20)">Browse around.</p>
+    </div>
+  </div>
+
+
+  <section data-trail="1" style="position:absolute; inset:0; z-index:1; touch-action:none; cursor:crosshair"></section>
+
+  <header data-screen-label="Top bar" style="position:fixed; left:0; right:0; top:0; z-index:6; display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:clamp(16px,1.6vw,24px) clamp(16px,3.47vw,52px); pointer-events:none">
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:clamp(12px,1.3vw,20px)">
+    <a href="Portfolio v2.dc.html" aria-label="Josefina Baccarin — home" style="display:block; flex:none; width:clamp(22px,2.05vw,31px); pointer-events:auto"><svg viewBox="439 107 44 63" style="display:block; width:100%; height:auto; overflow:visible"><path d="M474.166 124.399C479.041 123.288 483 120.077 483 115.116C483 109.394 478.582 107 471.872 107H458.334L457.989 108.635C462.694 109.043 463.267 109.394 462.521 113.597L460.626 123.523H448.752L448.351 125.158C453.457 125.682 453.802 125.801 452.939 130.471L448.752 152.718C446.801 162.993 444.966 166.554 439 168.189L439.459 170C440.606 169.884 442.672 169.533 444.621 168.541C449.44 166.089 451.734 161.884 453.226 153.826L457.644 130.471C458.227 127.347 458.601 126.259 460.208 125.719L457.875 137.946C457.445 140.598 457.416 140.825 457.136 142.908C457.134 143.82 457.838 144.572 458.735 144.612L466.708 144.953C475.6 144.953 482.312 140.575 482.312 133.392C482.312 128.371 478.412 125.452 474.166 124.401V124.399ZM467.396 112.021C467.911 108.986 468.83 108.927 471.124 108.927C474.337 108.927 477.95 110.27 477.95 115.175C477.95 120.08 475.197 123.525 468.599 123.525H465.214L467.394 112.024L467.396 112.021ZM467.282 142.908C463.095 142.908 461.717 142.032 462.521 137.711L464.815 125.509H467.741C472.674 125.509 477.092 127.436 477.092 133.333C477.092 139.23 472.961 142.908 467.284 142.908H467.282Z" fill="var(--ink,#231F20)"></path></svg></a>
+    </div>
+    <a href="mailto:josefinabaccarinm@gmail.com" style="display:flex; align-items:center; justify-content:center; box-sizing:border-box; padding:0 clamp(14px,1.4vw,22px); height:clamp(30px,2.38vw,36px); border:1px solid var(--ink,#231F20); border-radius:5.5px; background:var(--orange,#FF5B36); font-size:clamp(13px,1.19vw,18px); line-height:1; color:var(--ink,#231F20); pointer-events:auto" style-hover="background:var(--ink,#231F20); color:var(--cream,#F3EFED)">Get in Touch</a>
+  </header>
+
+  <nav style="position:fixed; left:clamp(16px,3.47vw,52px); top:50%; transform:translateY(-50%); z-index:8; display:flex; flex-direction:column; align-items:center; gap:clamp(14px,1.6vw,24px); pointer-events:auto">
+      <button onClick="{{ toggleIndex }}" style="padding:0; border:none; background:none; color:{{ indexFg }}; font-size:clamp(13px,1.19vw,18px); line-height:1.2; cursor:pointer; font-family:inherit; writing-mode:vertical-rl; transform:rotate(180deg)" style-hover="color:var(--orange,#FF5B36)">Projects</button>
+      <a href="About Me.dc.html" style="color:{{ navFg }}; font-size:clamp(13px,1.19vw,18px); line-height:1.2; writing-mode:vertical-rl; transform:rotate(180deg)" style-hover="color:var(--orange,#FF5B36)">About Me</a>
+  </nav>
+
+  <sc-if value="{{ showProject }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Project showcase" style="position:fixed; inset:0; z-index:7; background:var(--cream,#F3EFED)">
+      <div style="position:absolute; left:0; top:0; right:0; z-index:3; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:clamp(16px,1.6vw,24px) clamp(16px,3.47vw,52px)">
+        <div style="flex:1"></div>
+        <div style="display:flex; align-items:center; gap:clamp(14px,1.6vw,28px); font-size:clamp(12px,1vw,16px); color:var(--cream,#F3EFED)">
+          <p style="margin:0; letter-spacing:0.1em">{{ slideNum }} / {{ slideTotal }}</p>
+          <button onClick="{{ closeProject }}" aria-label="Close" style="padding:0; border:none; background:none; font-size:clamp(18px,1.6vw,26px); line-height:1; cursor:pointer; font-family:inherit; color:var(--cream,#F3EFED)" style-hover="color:var(--orange,#FF5B36)">&times;</button>
+        </div>
+      </div>
+      <div style="position:absolute; inset:0; z-index:2; display:flex; align-items:center; justify-content:center; padding:0 clamp(72px,7vw,120px); box-sizing:border-box; pointer-events:none">
+        <div style="display:flex; flex-direction:column; align-items:flex-start; gap:clamp(12px,1.6vh,22px); max-width:34ch; text-align:left; pointer-events:auto">
+        <p style="margin:0; text-align:left; font-size:clamp(20px,2vw,34px); letter-spacing:-0.01em; color:var(--cream,#F3EFED)">{{ projTitle }}</p>
+        <sc-if value="{{ slideText }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0; text-align:left; font-size:clamp(18px,1.8vw,30px); line-height:1.45; text-wrap:pretty; color:var(--cream,#F3EFED)">{{ slideText }}</p>
+        </sc-if>
+        <sc-if value="{{ projVideo }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ openVideo }}" style="margin-top:clamp(8px,1.2vh,16px);display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; width:clamp(150px,14vw,220px); height:clamp(34px,2.8vw,42px); border:1px solid var(--orange,#FF5B36); border-radius:5.5px; background:var(--orange,#FF5B36); color:var(--ink,#231F20); font-size:clamp(13px,1.19vw,18px); line-height:1; cursor:pointer; font-family:inherit" style-hover="background:var(--ink,#231F20); color:var(--orange,#FF5B36)">View the prototype</button>
+        </sc-if>
+        <sc-if value="{{ projBehance }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ projBehance }}" target="_blank" rel="noopener" style="margin-top:clamp(8px,1.2vh,16px);display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; width:clamp(140px,13vw,200px); height:clamp(34px,2.8vw,42px); border:1px solid var(--orange,#FF5B36); border-radius:5.5px; background:var(--orange,#FF5B36); color:var(--ink,#231F20); font-size:clamp(13px,1.19vw,18px); line-height:1" style-hover="background:var(--ink,#231F20); color:var(--orange,#FF5B36)">View on Behance</a>
+        </sc-if>
+        </div>
+      </div>
+      <div style="position:absolute; inset:0">
+        {{ slideImg }}
+        <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(100deg, rgba(20,18,17,0.7) 0%, rgba(20,18,17,0.6) 38%, rgba(20,18,17,0.45) 62%, rgba(20,18,17,0.12) 88%)"></div>
+        <div style="position:absolute; left:0; right:0; top:0; height:clamp(90px,12vh,160px); z-index:1; pointer-events:none; background:linear-gradient(180deg, rgba(20,18,17,0.6), rgba(20,18,17,0))"></div>
+        <button onClick="{{ nextSlide }}" aria-label="Next" style="z-index:2; position:absolute; right:clamp(28px,3vw,56px); top:50%; transform:translateY(-50%); display:flex; align-items:center; justify-content:center; width:clamp(44px,4vw,64px); height:clamp(44px,4vw,64px); padding:0; border:1px solid var(--cream,#F3EFED); border-radius:50%; background:none; font-size:clamp(18px,1.7vw,26px); line-height:1; cursor:pointer; font-family:inherit; color:var(--cream,#F3EFED)" style-hover="border-color:var(--orange,#FF5B36); color:var(--orange,#FF5B36)">&rarr;</button>
+      </div>
+      <sc-if value="{{ videoOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute; inset:0; z-index:6; background:rgba(14,13,12,0.92); display:flex; align-items:center; justify-content:center; padding:clamp(40px,6vh,80px) clamp(24px,6vw,120px)">
+          <button onClick="{{ closeVideo }}" aria-label="Close video" style="position:absolute; right:clamp(16px,3.47vw,52px); top:clamp(16px,1.6vw,24px); padding:0; border:none; background:none; font-size:clamp(18px,1.6vw,26px); line-height:1; cursor:pointer; font-family:inherit; color:var(--cream,#F3EFED)" style-hover="color:var(--orange,#FF5B36)">&times;</button>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:clamp(10px,1.4vh,18px); width:min(1100px,100%)">
+            <div style="width:100%; aspect-ratio:16/9; background:#000">
+              <iframe src="{{ videoSrc }}" title="Prototype walkthrough" referrerpolicy="origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen" allowfullscreen="true" style="width:100%; height:100%; border:none; display:block"></iframe>
+            </div>
+            <a href="{{ projVideo }}" target="_blank" rel="noopener" style="font-size:clamp(11px,0.9vw,14px); letter-spacing:0.1em; text-transform:uppercase; color:var(--cream,#F3EFED); opacity:0.7" style-hover="color:var(--orange,#FF5B36)">Watch on YouTube</a>
+          </div>
+        </div>
+      </sc-if>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ showIndex }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Index overlay" style="position:fixed; inset:0; z-index:5; background:var(--cream,#F3EFED); display:flex; align-items:center; padding:0 clamp(24px,6vw,120px) 0 max(72px, clamp(24px,6vw,120px))">
+      <ol style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px)">
+        <li><a href="#la-habana" style="display:block; font-size:clamp(28px,4.2vw,80px); line-height:1; letter-spacing:-0.02em" style-hover="color:var(--orange,#FF5B36)">City Branding &mdash; La Habana</a></li>
+        <li><a href="#astro" style="display:block; font-size:clamp(28px,4.2vw,80px); line-height:1; letter-spacing:-0.02em" style-hover="color:var(--orange,#FF5B36)">App &mdash; Astro Surf</a></li>
+        <li><a href="#transmedia" style="display:block; font-size:clamp(28px,4.2vw,80px); line-height:1; letter-spacing:-0.02em" style-hover="color:var(--orange,#FF5B36)">Dise&ntilde;o Transmedia</a></li>
+        <li><a href="#editorial" style="display:block; font-size:clamp(28px,4.2vw,80px); line-height:1; letter-spacing:-0.02em" style-hover="color:var(--orange,#FF5B36)">Typezine Longi</a></li>
+        <li><a href="#analog" style="display:block; font-size:clamp(28px,4.2vw,80px); line-height:1; letter-spacing:-0.02em" style-hover="color:var(--orange,#FF5B36)">Analog Photography</a></li>
+        <li><a href="AI Imagery.dc.html" style="display:block; font-size:clamp(28px,4.2vw,80px); line-height:1; letter-spacing:-0.02em" style-hover="color:var(--orange,#FF5B36)">AI Imagery</a></li>
+        <li><span style="display:inline-flex; align-items:baseline; gap:0.5em; font-size:clamp(28px,4.2vw,80px); line-height:1; letter-spacing:-0.02em; color:color-mix(in oklab, var(--ink,#231F20) 40%, transparent); cursor:default">Soma<span style="font-size:0.22em; letter-spacing:0.1em; text-transform:uppercase; color:var(--orange,#FF5B36)">work in progress</span></span></li>
+        <li><span style="display:inline-flex; align-items:baseline; gap:0.5em; font-size:clamp(28px,4.2vw,80px); line-height:1; letter-spacing:-0.02em; color:color-mix(in oklab, var(--ink,#231F20) 40%, transparent); cursor:default">Punto Bossa<span style="font-size:0.22em; letter-spacing:0.1em; text-transform:uppercase; color:var(--orange,#FF5B36)">work in progress</span></span></li>
+      </ol>
+    </section>
+  </sc-if>
+
+  <footer data-screen-label="Contact strip" style="position:fixed; left:0; right:0; bottom:0; z-index:6; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:clamp(12px,1.2vw,18px) clamp(16px,3.47vw,52px); pointer-events:none; font-size:clamp(11px,0.9vw,14px)">
+    <div style="display:flex; gap:clamp(14px,1.6vw,28px); pointer-events:auto">
+      <a href="mailto:josefinabaccarinm@gmail.com" style="color:var(--ink,#231F20)" style-hover="color:var(--orange,#FF5B36)">josefinabaccarinm@gmail.com</a>
+      <a href="https://instagram.com/jb.portfolio__" target="_blank" rel="noopener" style="color:var(--ink,#231F20)" style-hover="color:var(--orange,#FF5B36)">@jb.portfolio__</a>
+    </div>
+    <p style="margin:0; letter-spacing:0.08em; text-transform:uppercase; opacity:0.5">Buenos Aires, AR</p>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1920,&quot;height&quot;:1080}}">
+const SOURCES = [
+  { src: 'assets/canvas/thumb.jpg', cap: 'App · Astro Surf', href: '#astro', w: 300, ar: 3 / 2 },
+  { src: 'assets/canvas/punto-bossa-1.jpg', cap: 'Punto Bossa', href: '#punto', w: 230, ar: 4 / 5 },
+  { src: 'assets/canvas/behance-ai-01.jpg', cap: 'City Branding · La Habana', href: '#la-habana', w: 340, ar: 8 / 5 },
+  { src: 'assets/canvas/IMG_9407.jpg', cap: 'Analog Photography', href: '#analog', w: 280, ar: 3 / 2 },
+  { src: 'uploads/editorial.gif', cap: 'Typezine Longi', href: '#editorial', w: 300, ar: 13 / 10 },
+  { src: 'assets/canvas/behanceeee-02.jpg', cap: 'Diseño Transmedia', href: '#transmedia', w: 320, ar: 5 / 3 },
+  { src: 'assets/canvas/IMG_9611.jpg', cap: 'Analog Photography', href: '#analog', w: 220, ar: 2 / 3 },
+  { src: 'assets/canvas/behance-ai-09.jpg', cap: 'La Habana · social', href: '#la-habana', w: 300, ar: 7 / 4 },
+  { src: 'assets/canvas/IMG_1604.jpg', cap: 'Transmedia · flipbook', href: '#transmedia', w: 220, ar: 3 / 4 },
+  { src: 'assets/canvas/behance-ai-03.jpg', cap: 'La Habana · patrones', href: '#la-habana', w: 320, ar: 8 / 5 },
+  { src: 'assets/canvas/IMG_9646.jpg', cap: 'Analog Photography', href: '#analog', w: 300, ar: 3 / 2 },
+  { src: 'assets/canvas/behanceeee-03.jpg', cap: 'Transmedia · board', href: '#transmedia', w: 300, ar: 5 / 3 },
+  { src: 'assets/canvas/IMG_9610.jpg', cap: 'Analog Photography', href: '#analog', w: 220, ar: 2 / 3 },
+  { src: 'assets/canvas/behance-ai-09.jpg', cap: 'La Habana · social', href: '#la-habana', w: 280, ar: 7 / 4 },
+  { src: 'assets/canvas/IMG_9483.jpg', cap: 'Analog Photography', href: '#analog', w: 220, ar: 2 / 3 }
+];
+const PROJECTS = {
+  'la-habana': {
+    title: 'City Branding — La Habana',
+    behance: 'https://www.behance.net/gallery/253094301/La-Habana-Ciudades-Gabriele-3',
+    slides: [
+      { src: 'assets/canvas/behance-ai-01.jpg', text: 'A city branding system for La Habana — identity, catálogo and travel brochure developed at Cátedra Gabriele, FADU, UBA.' },
+      { src: 'uploads/desplegable.gif', text: 'The brochure unfolds the city: one continuous strip moving through La Habana\u2019s streets, color and rhythm.' },
+      { src: 'uploads/dossier.gif', text: 'Dossier — editorial pacing of the identity across spreads.' },
+      { src: 'assets/canvas/behance-ai-09.jpg', text: 'The system applied to social media.' },
+      { src: 'assets/canvas/behance-ai-03.jpg', text: 'Social media stories.' }
+    ]
+  },
+  'astro': { title: 'App — Astro Surf', video: 'https://youtu.be/c4dnbON_xxA', slides: [{ src: 'assets/canvas/thumb.jpg', text: 'A surf-forecast app concept — university project.' }] },
+
+  'transmedia': {
+    title: 'Diseño Transmedia',
+    behance: 'https://www.behance.net/gallery/253373933/Tocar-Recordar',
+    slides: [
+      { src: 'assets/canvas/behanceeee-02.jpg', text: 'Memoria Protésica — a transmedia design project on memory and objects.' },
+      { src: 'assets/canvas/IMG_1604.jpg' },
+      { src: 'uploads/entraga-dtyat-behance.gif', text: 'Tocar / Recordar.' },
+      { src: 'assets/canvas/behanceeee-03.jpg' }
+    ]
+  },
+  'editorial': { title: 'Typezine Longi', behance: 'https://www.behance.net/gallery/254158949/Editorial-Longinotti-2', slides: [{ src: 'uploads/editorial.gif', text: 'La Astrología y los Planetas — editorial poster exploring type as constellation.' }] },
+  'analog': {
+    title: 'Analog Photography',
+    slides: [
+      { src: 'assets/canvas/IMG_9646.jpg', text: 'A personal archive shot on film across Southeast Asia.' },
+      { src: 'assets/canvas/IMG_9611.jpg' },
+      { src: 'assets/canvas/IMG_9610.jpg' },
+      { src: 'assets/canvas/IMG_9407.jpg' },
+      { src: 'assets/canvas/IMG_9483.jpg' }
+    ]
+  }
+};
+const stepFor = () => Math.min(130, (window.innerWidth || 1000) * 0.18);   // px of pointer travel between reveals — tighter on mobile
+const LIFE = 2400;     // ms a trail image stays before fading
+const MAXLIVE = 9;     // hard cap on simultaneous images
+
+class Component extends DCLogic {
+  state = { showIndex: false, project: null, slide: 0 };
+  renderVals() {
+    const { showIndex, project, slide } = this.state;
+    const p = project ? PROJECTS[project] : null;
+    const n = p ? p.slides.length : 0;
+    const cur = p ? p.slides[((slide % n) + n) % n] : null;
+    return {
+      showIndex,
+      toggleIndex: () => this.setState({ showIndex: !showIndex, project: null, slide: 0 }),
+      indexFg: showIndex ? 'var(--orange,#FF5B36)' : (p ? 'var(--cream,#F3EFED)' : 'var(--ink,#231F20)'),
+      navFg: p ? 'var(--cream,#F3EFED)' : 'var(--ink,#231F20)',
+      showProject: !!p,
+      projTitle: p ? p.title : '',
+      projBehance: p && p.behance ? p.behance : false,
+      projVideo: p && p.video ? p.video : false,
+      videoOpen: !!this.state.videoOpen && !!(p && p.video),
+      videoSrc: p && p.video ? 'https://www.youtube.com/embed/' + ((p.video.split('v=')[1] || p.video.split('youtu.be/')[1] || '').split(/[&?]/)[0]) + '?rel=0&playsinline=1' : '',
+      openVideo: () => this.setState({ videoOpen: true }),
+      closeVideo: () => this.setState({ videoOpen: false }),
+      slideImg: cur ? React.createElement('img', {
+        src: cur.src, alt: p.title,
+        onClick: () => this.setState(s => ({ slide: s.slide + 1 })),
+        style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block', cursor: 'e-resize' }
+      }) : null,
+      slideText: cur && cur.text ? cur.text : false,
+      slideNum: String((((slide % n) + n) % n) + 1).padStart(2, '0'),
+      slideTotal: String(n).padStart(2, '0'),
+      nextSlide: () => this.setState(s => ({ slide: s.slide + 1 })),
+      prevSlide: () => this.setState(s => ({ slide: s.slide - 1 })),
+      closeProject: () => this.setState({ project: null, slide: 0, videoOpen: false })
+    };
+  }
+  openProject(key) {
+    if (PROJECTS[key]) this.setState({ project: key, slide: 0, showIndex: false, videoOpen: false });
+  }
+  componentDidMount() {
+    const root = document.querySelector('#dc-root') || document;
+    const stage = root.querySelector('[data-trail]');
+    const capEl = root.querySelector('[data-caption]');
+    if (!stage) return;
+    stage.textContent = '';
+    SOURCES.forEach(s => { const i = new Image(); i.src = s.src; });   // pre-warm
+    let idx = 0, lx = null, ly = null, acc = 0;
+    const live = [];
+    const spawn = (x, y) => {
+      const s = SOURCES[idx % SOURCES.length]; idx++;
+      const w = Math.min(s.w * 0.62, (window.innerWidth || 1000) * 0.24);
+      const h = w / s.ar;
+      const a = document.createElement('a');
+      a.href = s.href;
+      a.draggable = false;
+      a.style.cssText = 'position:absolute; left:0; top:0; width:' + w + 'px; height:' + h + 'px; display:block; overflow:hidden; transform:translate(' + (x - w / 2) + 'px,' + (y - h / 2) + 'px) scale(0.6); opacity:0; transition:transform 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.45s';
+      const img = document.createElement('img');
+      img.src = s.src;
+      img.draggable = false;
+      img.style.cssText = 'width:100%; height:100%; object-fit:cover; display:block';
+      a.appendChild(img);
+      a.addEventListener('pointerenter', () => { if (capEl) { capEl.textContent = s.cap; capEl.style.opacity = '1'; } });
+      a.addEventListener('pointerleave', () => { if (capEl) capEl.style.opacity = '0'; });
+      stage.appendChild(a);
+      requestAnimationFrame(() => {
+        a.style.opacity = '1';
+        a.style.transform = 'translate(' + (x - w / 2) + 'px,' + (y - h / 2) + 'px) scale(1)';
+      });
+      const rec = { el: a, t: setTimeout(() => kill(rec), LIFE) };
+      live.push(rec);
+      while (live.length > MAXLIVE) kill(live[0]);
+    };
+    const kill = rec => {
+      const i = live.indexOf(rec);
+      if (i < 0) return;
+      live.splice(i, 1);
+      clearTimeout(rec.t);
+      const el = rec.el;
+      el.style.opacity = '0';
+      el.style.transform += ' scale(0.92)';
+      setTimeout(() => el.remove(), 500);
+    };
+    this._onMove = e => {
+      const x = e.clientX, y = e.clientY;
+      if (lx === null) { lx = x; ly = y; spawn(x, y); return; }
+      acc += Math.hypot(x - lx, y - ly);
+      lx = x; ly = y;
+      if (acc >= stepFor()) { acc = 0; spawn(x, y); }
+    };
+    stage.addEventListener('pointermove', this._onMove);
+    stage.addEventListener('pointerdown', e => { lx = e.clientX; ly = e.clientY; spawn(e.clientX, e.clientY); });
+    // any in-page project link (trail images, index list) opens the showcase
+    this._onClick = e => {
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      const key = a.getAttribute('href').slice(1);
+      if (PROJECTS[key]) { e.preventDefault(); this.openProject(key); }
+      else if (key === 'soma' || key === 'punto') e.preventDefault();
+    };
+    root.addEventListener('click', this._onClick);
+    this._onKey = e => {
+      if (!this.state.project) return;
+      if (e.key === 'ArrowRight') this.setState(s => ({ slide: s.slide + 1 }));
+      if (e.key === 'ArrowLeft') this.setState(s => ({ slide: s.slide - 1 }));
+      if (e.key === 'Escape') this.setState(s => s.videoOpen ? { videoOpen: false } : { project: null, slide: 0 });
+    };
+    window.addEventListener('keydown', this._onKey);
+  }
+  componentWillUnmount() {
+    if (this._onKey) window.removeEventListener('keydown', this._onKey);
+    if (this._onMove) {
+      const stage = document.querySelector('[data-trail]');
+      if (stage) stage.removeEventListener('pointermove', this._onMove);
+    }
+  }
+}
+</script>
+</body>
+</html>

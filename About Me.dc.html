@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+html,body{margin:0;padding:0}
+body{background:#F3EFED;-webkit-font-smoothing:antialiased}
+a{color:#231F20;text-decoration:none}
+a:hover{color:#FF5B36}
+@media (max-width:760px){
+  .fb{grid-column:span 6 !important; padding-left:0 !important; margin-top:0 !important}
+  .strip{position:static !important; margin-top:40px !important; justify-content:flex-start !important}
+  .strip-inner{flex-direction:row !important; width:100% !important}
+}
+@media (max-width:430px){
+  .fb{grid-column:1 / -1 !important}
+}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="--orange:#FF5B36; --cream:#F3EFED; --ink:#231F20; min-height:100svh; box-sizing:border-box; padding:clamp(16px,3vw,44px); background:var(--cream,#F3EFED); font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Text Pro','Neue Haas Grotesk','Neue Haas Unica','Helvetica Neue',Helvetica,Arial,sans-serif; color:var(--ink,#231F20)">
+
+  <header data-screen-label="Top bar" style="position:sticky; top:0; z-index:5; display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:1400px; margin:0 auto; padding:clamp(16px,1.8vw,26px) clamp(24px,3.6vw,56px); background:var(--cream,#F3EFED)">
+    <a href="Portfolio v2.dc.html" aria-label="Josefina Baccarin — home" style="display:block; flex:none; width:clamp(22px,2.05vw,31px)"><svg viewBox="439 107 44 63" style="display:block; width:100%; height:auto; overflow:visible"><path d="M474.166 124.399C479.041 123.288 483 120.077 483 115.116C483 109.394 478.582 107 471.872 107H458.334L457.989 108.635C462.694 109.043 463.267 109.394 462.521 113.597L460.626 123.523H448.752L448.351 125.158C453.457 125.682 453.802 125.801 452.939 130.471L448.752 152.718C446.801 162.993 444.966 166.554 439 168.189L439.459 170C440.606 169.884 442.672 169.533 444.621 168.541C449.44 166.089 451.734 161.884 453.226 153.826L457.644 130.471C458.227 127.347 458.601 126.259 460.208 125.719L457.875 137.946C457.445 140.598 457.416 140.825 457.136 142.908C457.134 143.82 457.838 144.572 458.735 144.612L466.708 144.953C475.6 144.953 482.312 140.575 482.312 133.392C482.312 128.371 478.412 125.452 474.166 124.401V124.399ZM467.396 112.021C467.911 108.986 468.83 108.927 471.124 108.927C474.337 108.927 477.95 110.27 477.95 115.175C477.95 120.08 475.197 123.525 468.599 123.525H465.214L467.394 112.024L467.396 112.021ZM467.282 142.908C463.095 142.908 461.717 142.032 462.521 137.711L464.815 125.509H467.741C472.674 125.509 477.092 127.436 477.092 133.333C477.092 139.23 472.961 142.908 467.284 142.908H467.282Z" fill="var(--ink,#231F20)"></path></svg></a>
+    <a href="Work v3.dc.html" style="display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; padding:0 clamp(14px,1.4vw,22px); height:clamp(30px,2.38vw,36px); border:1px solid var(--ink,#231F20); border-radius:5.5px; background:var(--orange,#FF5B36); font-size:clamp(13px,1.19vw,18px); line-height:1; color:var(--ink,#231F20)" style-hover="background:var(--ink,#231F20); color:var(--cream,#F3EFED)">&larr; Back to Work</a>
+  </header>
+
+  <section data-screen-label="About" style="position:relative; box-sizing:border-box; max-width:1400px; margin:0 auto; padding:clamp(28px,3.6vw,56px) clamp(24px,3.6vw,56px) 0">
+
+    <h1 style="margin:0 auto; max-width:22ch; text-align:center; font-size:clamp(20px,2.2vw,34px); line-height:1.15; letter-spacing:-0.01em; font-weight:400; color:var(--orange,#FF5B36); text-transform:uppercase">Graphic Designer</h1>
+
+    <div style="display:grid; grid-template-columns:repeat(12, 1fr); gap:clamp(48px,7vw,110px) 0; max-width:min(1000px, calc(100% - clamp(120px,12vw,180px))); margin:clamp(64px,9vw,150px) 0 0; font-size:clamp(11px,0.95vw,15px); line-height:1.8; letter-spacing:0.16em; text-transform:uppercase">
+
+      <div class="fb" style="grid-column:1 / span 4">
+        <p style="margin:0"><span style="color:var(--orange,#FF5B36)">[01]</span>&nbsp;&nbsp;Visual identity</p>
+        <p style="margin:0">brand systems, logotypes,</p>
+        <p style="margin:0">guidelines and applications</p>
+      </div>
+
+      <div class="fb" style="grid-column:5 / span 4">
+        <p style="margin:0"><span style="color:var(--orange,#FF5B36)">[02]</span>&nbsp;&nbsp;E-commerce &amp; email</p>
+        <p style="margin:0">Klaviyo flows, Meta Ads,</p>
+        <p style="margin:0">Amazon A+ content, Shopify</p>
+      </div>
+
+      <div class="fb" style="grid-column:2 / span 4">
+        <p style="margin:0"><span style="color:var(--orange,#FF5B36)">[03]</span>&nbsp;&nbsp;Editorial &amp; web</p>
+        <p style="margin:0">books, dossiers, posters,</p>
+        <p style="margin:0">portfolio sites and app concepts</p>
+      </div>
+
+      <div class="fb" style="grid-column:6 / span 4">
+        <p style="margin:0"><span style="color:var(--orange,#FF5B36)">[04]</span>&nbsp;&nbsp;Art direction</p>
+        <p style="margin:0">packaging, product imagery and</p>
+        <p style="margin:0">AI image systems for campaigns</p>
+      </div>
+
+      <div class="fb" style="grid-column:1 / span 5; margin-top:clamp(16px,2vw,32px)">
+        <p style="margin:0"><span style="color:var(--orange,#FF5B36)">[05]</span>&nbsp;&nbsp;BA in Graphic Design</p>
+        <p style="margin:0">FADU, Universidad de Buenos Aires</p>
+        <p style="margin:0">2020 &ndash; present &middot; final year</p>
+      </div>
+
+      <div class="fb" style="grid-column:7 / span 6; padding-left:clamp(0px,7vw,92px); margin-top:clamp(16px,2vw,32px)">
+        <p style="margin:0"><span style="color:var(--orange,#FF5B36)">[06]</span>&nbsp;&nbsp;Based in Buenos Aires</p>
+        <p style="margin:0">working remotely with US brands</p>
+        <p style="margin:0">Spanish native &middot; English C1</p>
+      </div>
+    </div>
+
+    <div class="strip" style="position:absolute; right:clamp(24px,3.6vw,56px); top:clamp(96px,13vw,220px); display:flex; align-items:flex-start; gap:clamp(14px,1.6vw,26px)">
+      <div class="strip-inner" style="display:flex; flex-direction:column; gap:2px; width:clamp(90px,8vw,120px)">
+        <div style="flex:1; aspect-ratio:4/3; background:var(--ink,#231F20)"><img src="assets/canvas/IMG_9646.jpg" alt="" style="width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.05); display:block"></div>
+        <div style="flex:1; aspect-ratio:4/3; background:var(--ink,#231F20)"><img src="assets/canvas/IMG_9611.jpg" alt="" style="width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.05); display:block"></div>
+        <div style="flex:1; aspect-ratio:4/3; background:var(--ink,#231F20)"><img src="assets/canvas/IMG_9407.jpg" alt="" style="width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.05); display:block"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section data-screen-label="About detail" style="max-width:1400px; margin:clamp(110px,16vw,240px) auto 0; padding:0 clamp(24px,3.6vw,56px) clamp(20px,2.4vw,36px)">
+
+    <header style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px">
+      <h2 style="margin:0; font-size:clamp(24px,2.6vw,40px); line-height:1; letter-spacing:-0.01em; font-weight:400; color:var(--orange,#FF5B36)">ABOUT ME</h2>
+    </header>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,280px),1fr)); gap:clamp(20px,3vw,48px); margin-top:clamp(20px,2.6vw,40px)">
+      <p style="margin:0; max-width:52ch; font-size:clamp(13px,1.05vw,16px); line-height:1.65; text-wrap:pretty">Marketing and e-commerce designer working remotely with US brands. I run the full commercial creative pipeline — paid social, email, Amazon A+ content, packaging and product imagery — and build AI image systems that stay consistent across entire campaigns.</p>
+      <p style="margin:0; max-width:52ch; font-size:clamp(13px,1.05vw,16px); line-height:1.65; text-wrap:pretty">Final-year Graphic Design student at Universidad de Buenos Aires, FADU.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,320px),1fr)); gap:clamp(20px,3vw,48px); align-items:start; margin-top:clamp(24px,3vw,48px)">
+      <div style="aspect-ratio:1/1; width:min(100%, 400px); background:var(--ink,#231F20)">
+        <img src="uploads/foto.png" alt="Josefina Baccarin" style="width:100%; height:100%; object-fit:cover; object-position:50% 14%; display:block">
+      </div>
+      <div>
+        <h3 style="margin:0 0 clamp(16px,1.8vw,28px); font-size:clamp(20px,2.2vw,34px); line-height:1; letter-spacing:-0.01em; font-weight:400; color:var(--orange,#FF5B36)">EDUCATION</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,190px),1fr)); gap:clamp(18px,2.2vw,34px); font-size:clamp(11px,0.9vw,14px); line-height:1.7; letter-spacing:0.1em">
+          <div>
+            <p style="margin:0 0 8px; color:var(--orange,#FF5B36)">2020 &ndash; present</p>
+            <p style="margin:0; text-transform:uppercase">BA in Graphic Design, FADU, Universidad de Buenos Aires — final year</p>
+          </div>
+          <div>
+            <p style="margin:0 0 8px; color:var(--orange,#FF5B36)">Cátedra Gabriele</p>
+            <p style="margin:0; text-transform:uppercase">Conceptual approach, design process and visual criteria</p>
+          </div>
+        </div>
+
+        <h3 style="margin:clamp(28px,3.2vw,52px) 0 clamp(16px,1.8vw,28px); font-size:clamp(20px,2.2vw,34px); line-height:1; letter-spacing:-0.01em; font-weight:400; color:var(--orange,#FF5B36)">EXPERIENCE</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,190px),1fr)); gap:clamp(18px,2.2vw,34px); font-size:clamp(11px,0.9vw,14px); line-height:1.7; letter-spacing:0.1em">
+          <div>
+            <p style="margin:0 0 8px; color:var(--orange,#FF5B36)">2023 &ndash; present</p>
+            <p style="margin:0; text-transform:uppercase">Marketing &amp; E-commerce Specialist, Ancient Choice (US, remote)</p>
+          </div>
+          <div>
+            <p style="margin:0 0 8px; color:var(--orange,#FF5B36)">2022 &ndash; present</p>
+            <p style="margin:0; text-transform:uppercase">Team Lead, Operations &amp; Customizations, High Camp Flasks (US, remote)</p>
+          </div>
+          <div>
+            <p style="margin:0 0 8px; color:var(--orange,#FF5B36)">2023 &ndash; 2026</p>
+            <p style="margin:0; text-transform:uppercase">Freelance design — identity, social, advertising and editorial</p>
+          </div>
+        </div>
+
+        <h3 style="margin:clamp(28px,3.2vw,52px) 0 clamp(16px,1.8vw,28px); font-size:clamp(20px,2.2vw,34px); line-height:1; letter-spacing:-0.01em; font-weight:400; color:var(--orange,#FF5B36)">TOOLS</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,190px),1fr)); gap:clamp(18px,2.2vw,34px); font-size:clamp(11px,0.9vw,14px); line-height:1.7; letter-spacing:0.1em; text-transform:uppercase">
+          <p style="margin:0">Illustrator, Photoshop, InDesign</p>
+          <p style="margin:0">After Effects, Figma</p>
+          <p style="margin:0">Klaviyo, Shopify, Meta Ads</p>
+          <p style="margin:0">AI tools for image production</p>
+          <p style="margin:0">ComfyUI, Figma Weave</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+</x-dc>
+</body>
+</html>

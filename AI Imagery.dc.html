@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+html,body{margin:0;padding:0}
+body{background:#F3EFED;-webkit-font-smoothing:antialiased}
+a{color:#231F20;text-decoration:none}
+a:hover{color:#FF5B36}
+[data-lib]>div{position:relative;overflow:hidden}
+[data-lib]>div::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.2);transition:background 0.35s ease;pointer-events:none}
+[data-lib]>div:hover::after{background:rgba(0,0,0,0)}
+[data-lib] img{transition:transform 0.5s cubic-bezier(0.22,1,0.36,1)}
+[data-lib]>div:hover img{transform:scale(1.04)}
+</style>
+</helmet>
+<div style="--white:#FFFFFF; --orange:#FF5B36; --cream:#F3EFED; --ink:#231F20; background:var(--cream); color:var(--ink); font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Text Pro','Neue Haas Grotesk','Neue Haas Unica','Helvetica Neue',Helvetica,Arial,sans-serif">
+
+  <header style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:clamp(16px,2vw,28px) clamp(16px,3.47vw,52px); position:relative; z-index:10; background:var(--cream,#F3EFED)">
+    <a href="Portfolio v2.dc.html" aria-label="Josefina Baccarin — home" style="display:block; flex:none; width:clamp(22px,2.05vw,31px)"><svg viewBox="439 107 44 63" style="display:block; width:100%; height:auto; overflow:visible"><path d="M474.166 124.399C479.041 123.288 483 120.077 483 115.116C483 109.394 478.582 107 471.872 107H458.334L457.989 108.635C462.694 109.043 463.267 109.394 462.521 113.597L460.626 123.523H448.752L448.351 125.158C453.457 125.682 453.802 125.801 452.939 130.471L448.752 152.718C446.801 162.993 444.966 166.554 439 168.189L439.459 170C440.606 169.884 442.672 169.533 444.621 168.541C449.44 166.089 451.734 161.884 453.226 153.826L457.644 130.471C458.227 127.347 458.601 126.259 460.208 125.719L457.875 137.946C457.445 140.598 457.416 140.825 457.136 142.908C457.134 143.82 457.838 144.572 458.735 144.612L466.708 144.953C475.6 144.953 482.312 140.575 482.312 133.392C482.312 128.371 478.412 125.452 474.166 124.401V124.399ZM467.396 112.021C467.911 108.986 468.83 108.927 471.124 108.927C474.337 108.927 477.95 110.27 477.95 115.175C477.95 120.08 475.197 123.525 468.599 123.525H465.214L467.394 112.024L467.396 112.021ZM467.282 142.908C463.095 142.908 461.717 142.032 462.521 137.711L464.815 125.509H467.741C472.674 125.509 477.092 127.436 477.092 133.333C477.092 139.23 472.961 142.908 467.284 142.908H467.282Z" fill="var(--ink,#231F20)"></path></svg></a>
+    <h1 style="margin:0; font-size:clamp(15px,1.5vw,23px); line-height:1; letter-spacing:-0.01em; font-weight:400">Generative <em style="font-style:italic; color:var(--orange)">image direction</em></h1>
+    <div style="display:flex; align-items:center; gap:clamp(14px,1.6vw,28px)">
+      <span style="font-size:clamp(11px,1.05vw,14px); letter-spacing:0.14em; color:var(--orange)">AI Imagery</span>
+      <a href="Work v3.dc.html" aria-label="Close" style="display:block; font-size:clamp(18px,1.6vw,26px); line-height:1; color:var(--ink,#231F20)" style-hover="color:var(--orange,#FF5B36)">&times;</a>
+    </div>
+  </header>
+
+  <nav style="position:fixed; left:clamp(16px,3.47vw,52px); top:50%; transform:translateY(-50%); z-index:11; display:flex; flex-direction:column; align-items:center; gap:clamp(14px,1.6vw,24px); mix-blend-mode:difference">
+    <a href="Work v3.dc.html" style="color:#F3EFED; font-size:clamp(13px,1.19vw,18px); line-height:1.2; writing-mode:vertical-rl; transform:rotate(180deg)" style-hover="color:var(--orange,#FF5B36)">Projects</a>
+    <a href="About Me.dc.html" style="color:#F3EFED; font-size:clamp(13px,1.19vw,18px); line-height:1.2; writing-mode:vertical-rl; transform:rotate(180deg)" style-hover="color:var(--orange,#FF5B36)">About Me</a>
+  </nav>
+
+  <div style="position:relative">
+
+  <section data-lib="1" data-screen-label="Image library" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap:0">
+    <div><img src="uploads/ac_multi-product_hero_dark-green_20260812_v1.png" alt="Full range on dark green stone" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_all-products_4th-of-july_20260630_v1.png" alt="Full range on dark stone" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_bpp_recipe_blue-oatmeal_20260512_v1.png" alt="Butterfly pea oatmeal in copper pan" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_dfp_recipe_ricotta-toast_20260512_v1.png" alt="Dragon fruit ricotta toast" style="display:block; width:145%; height:145%; margin:-22.5% 0 0 -22.5%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_wbp_recipe_yogurt-swirl_20260512_v1.png" alt="Wild blueberry yogurt swirl" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_multi-product_hero-5up_landscape_20260701_v2.png" alt="Five-product range on terracotta" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/bpp_static_ad_v2_00003_.png" alt="Butterfly pea pouch flatlay on slate" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#161616"></div>
+    <div><img src="uploads/bpp_static_ad_v2_00001_.png" alt="Butterfly pea powder spilled on burlap" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#161616"></div>
+    <div><img src="uploads/wbb_static_ad_00001_.png" alt="Wild blueberry pouch flatlay on slate" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#161616"></div>
+    <div><img src="uploads/wbb_static_ad_00003_.png" alt="Wild blueberry powder spilled on burlap" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#161616"></div>
+    <div><img src="uploads/stb_static_ad_00001_.png" alt="Strawberry pouch flatlay on slate" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#161616"></div>
+    <div><img src="uploads/stb_static_ad_00003_.png" alt="Strawberry powder spilled on burlap" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#161616"></div>
+    <div><img src="uploads/dfp_static_ad_00006_.png" alt="Dragon fruit pouch flatlay on slate" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#161616"></div>
+    <div><img src="uploads/dfp_static_ad_00003_.png" alt="Dragon fruit powder pouring onto burlap" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#161616"></div>
+    <div><img src="uploads/ac_bpp_recipe-ad_cinco-de-mayo_margarita-pour_20260423_v2.png" alt="Butterfly pea margarita pour" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_bpp_recipe-ad_cinco-de-mayo_blue-cocktail-flatlay_20260423_v1.png" alt="Blue cocktail flatlay on copper" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_stb_recipe-ad_cinco-de-mayo_mixing-glass-stir_20260423_v1.png" alt="Strawberry mixing glass stir" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_stb_recipe-ad_cinco-de-mayo_spicy-strawberry-marg_20260423_v1.png" alt="Spicy strawberry margarita" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_bpp_static-ad_earth-day_wildflower-meadow_20260415_v1.png" alt="Pouch in wildflower meadow" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_bpp_static-ad_earth-day_green-blanket_20260415_v3.png" alt="Picnic blanket setup" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_stb_static-ad_earth-day_cutting-board_20260415_v3.png" alt="Strawberry pouch on cutting board" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/03.png" alt="Crochet-trim bikini flatlay on rock" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/Gemini_Generated_Image_31n0l831n0l831n0.png" alt="Logo drawn in sand" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/IMG_4690.png" alt="Cream colorway, beach portrait" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/IMG_4866%20jose%202.png" alt="Black colorway, beach portrait" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/IMG_1584.png" alt="Terracotta colorway with knit cover-up" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/IMG_1609%202%20mari.png" alt="Terracotta colorway, seated" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/IMG_1619%202.png" alt="Cream and black colorways, duo" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/IMG_4290%20sin%20mari.png" alt="Brown colorway against the cliffs" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#C4C4C4"></div>
+    <div><img src="uploads/ac_bpp_ugc_4th-of-july_pouch-hold_20260626_v7.png" alt="Creator holding pouch" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#3a3536"></div>
+    <div><img src="uploads/ac_bpp_ugc_4th-of-july_blue-latte-table_20260626_v3.png" alt="Creator with blue latte" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#3a3536"></div>
+    <div><img src="uploads/ac_wbb_ugc_yogurt-bowl_20260518_v1.png" alt="Creator with yogurt bowl" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#3a3536"></div>
+    <div><img src="uploads/ac_wbb_ugc_smoothie-blender_20260518_v3.png" alt="Creator adding blueberry powder to a blender" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#3a3536"></div>
+    <div><img src="uploads/ac_wbb_ugc_overnight-oats_20260518_v2.png" alt="Creator making overnight oats" style="display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; background:#3a3536"></div>
+  </section>
+  </div>
+
+  <footer style="padding:clamp(48px,8vw,120px) clamp(48px,7vw,110px); display:flex; flex-wrap:wrap; gap:24px; align-items:flex-end; justify-content:space-between">
+    <p style="margin:0; font-size:clamp(24px,4.4vw,64px); line-height:1; letter-spacing:-0.03em; font-weight:300">Want the full set?</p>
+    <a href="mailto:josefinabaccarinm@gmail.com" style="font-size:clamp(15px,1.6vw,22px); border-bottom:1px solid currentColor; padding-bottom:2px">josefinabaccarinm@gmail.com</a>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+html,body{margin:0;padding:0}
+body{background:#FFFFFF;-webkit-font-smoothing:antialiased}
+a{color:#231F20;text-decoration:none}
+a:hover{color:#FF5B36}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="position:relative; isolation:isolate">
+<div aria-hidden="true" style="position:absolute; inset:0; z-index:0; background:#FFFFFF url('uploads/IMG_9638.jpg') center/cover no-repeat"></div>
+<main style="--white:#FFFFFF; --orange:#FF5B36; --cream:#F3EFED; --ink:#231F20; --line:#000000; position:relative; z-index:1; overflow:hidden; width:100%; max-width:1512px; margin:0 auto; container-type:inline-size; height:min(982px, max(100svh, 64.95vw)); min-height:520px; font-family:'Neue Haas Grotesk Display Pro','Neue Haas Grotesk Text Pro','Neue Haas Grotesk','Neue Haas Unica','Helvetica Neue',Helvetica,Arial,sans-serif; color:var(--ink,#231F20)">
+
+  <div aria-hidden="true" style="position:absolute; left:max(0px, calc(17.46cqw - 130px)); top:clamp(48px, 9.19cqw, 139px); right:-4.1cqw; bottom:-5.2cqw; background:var(--orange,#FF5B36)">
+    <svg viewBox="439 107 44 63" aria-hidden="true" style="position:absolute; left:clamp(8px, 3.5cqw, 53px); top:clamp(10px, 2.65cqw, 40px); width:clamp(13px, 2.31cqw, 35px); height:auto; overflow:visible">
+      <path d="M474.166 124.399C479.041 123.288 483 120.077 483 115.116C483 109.394 478.582 107 471.872 107H458.334L457.989 108.635C462.694 109.043 463.267 109.394 462.521 113.597L460.626 123.523H448.752L448.351 125.158C453.457 125.682 453.802 125.801 452.939 130.471L448.752 152.718C446.801 162.993 444.966 166.554 439 168.189L439.459 170C440.606 169.884 442.672 169.533 444.621 168.541C449.44 166.089 451.734 161.884 453.226 153.826L457.644 130.471C458.227 127.347 458.601 126.259 460.208 125.719L457.875 137.946C457.445 140.598 457.416 140.825 457.136 142.908C457.134 143.82 457.838 144.572 458.735 144.612L466.708 144.953C475.6 144.953 482.312 140.575 482.312 133.392C482.312 128.371 478.412 125.452 474.166 124.401V124.399ZM467.396 112.021C467.911 108.986 468.83 108.927 471.124 108.927C474.337 108.927 477.95 110.27 477.95 115.175C477.95 120.08 475.197 123.525 468.599 123.525H465.214L467.394 112.024L467.396 112.021ZM467.282 142.908C463.095 142.908 461.717 142.032 462.521 137.711L464.815 125.509H467.741C472.674 125.509 477.092 127.436 477.092 133.333C477.092 139.23 472.961 142.908 467.284 142.908H467.282Z" fill="var(--white,#FFFFFF)"></path>
+    </svg>
+  </div>
+
+  <section style="position:absolute; left:max(clamp(24px, 9.59cqw, 145px), calc(26.92cqw - 130px)); top:clamp(24px, 3.76cqw, 57px); right:-10.25cqw; bottom:0; overflow:hidden; background:var(--cream,#F3EFED); padding:clamp(26px, 3.32cqw, 50px) 0 0 clamp(18px, 2.12cqw, 32px)">
+
+    <sc-if value="{{ punchHoles }}" hint-placeholder-val="{{ true }}">
+      <div aria-hidden="true" style="position:absolute; left:clamp(16px, 1.77cqw, 26.8px); top:clamp(38px, 4.63cqw, 70px); width:14.46px; bottom:-70px; background-image:radial-gradient(circle 7.23px at 7.23px 7.23px, var(--orange,#FF5B36) 7.23px, rgba(255,91,54,0) 7.24px); background-size:14.46px 70.03px; background-repeat:repeat-y"></div>
+    </sc-if>
+
+    <sc-if value="{{ showWatermark }}" hint-placeholder-val="{{ true }}">
+      <img src="assets/watermark.svg" alt="" aria-hidden="true" style="position:absolute; right:10.25cqw; bottom:0; height:min(100%, 62cqw); width:auto; max-width:none; object-fit:contain; object-position:100% 100%; pointer-events:none">
+    </sc-if>
+
+    <div style="position:relative; height:100%; display:flex; flex-direction:column; align-items:flex-start">
+      <header style="display:flex; align-items:center; flex-wrap:wrap; row-gap:16px">
+        <nav style="display:flex; flex-wrap:wrap; gap:clamp(6px, 3.84cqw, 58px); margin-left:clamp(8px, 7.9cqw, 120px)">
+          <a href="#" style="display:flex; align-items:center; justify-content:center; box-sizing:border-box; width:clamp(88px, 11.18cqw, 169px); height:clamp(24px, 2.38cqw, 36px); border:1px solid var(--line,#000000); border-radius:5.5px; background:var(--cream,#F3EFED); font-size:clamp(10px, 1.19cqw, 18px); line-height:1; letter-spacing:0.01em; color:var(--line,#000000)" style-hover="background:var(--line,#000000); color:var(--cream,#F3EFED)">Graphic Designer</a>
+          <a href="#" style="display:flex; align-items:center; justify-content:center; box-sizing:border-box; width:clamp(88px, 11.18cqw, 169px); height:clamp(24px, 2.38cqw, 36px); border:1px solid var(--line,#000000); border-radius:5.5px; background:var(--cream,#F3EFED); font-size:clamp(10px, 1.19cqw, 18px); line-height:1; letter-spacing:0.01em; color:var(--line,#000000)" style-hover="background:var(--line,#000000); color:var(--cream,#F3EFED)">Touch Designer</a>
+          <a href="#" style="display:flex; align-items:center; justify-content:center; box-sizing:border-box; width:clamp(88px, 11.18cqw, 169px); height:clamp(24px, 2.38cqw, 36px); border:1px solid var(--line,#000000); border-radius:5.5px; background:var(--cream,#F3EFED); font-size:clamp(10px, 1.19cqw, 18px); line-height:1; letter-spacing:0.01em; color:var(--line,#000000)" style-hover="background:var(--line,#000000); color:var(--cream,#F3EFED)">Web Designer</a>
+        </nav>
+      </header>
+      <h1 style="margin:clamp(64px, 15.87cqw, 240px) 0 0 clamp(16px, 7.9cqw, 120px); font-size:clamp(28px, 3.17cqw, 48px); font-weight:400; line-height:1.223; letter-spacing:-0.03em; color:var(--line,#000000); text-wrap:pretty">
+        <span style="display:block">Hi!</span>
+        <span style="display:block">I&rsquo;m Josefina Baccarin</span>
+      </h1>
+      <p style="margin:clamp(16px, 1.59cqw, 24px) 0 0 clamp(16px, 7.9cqw, 120px); max-width:38ch; font-size:clamp(13px, 1.19cqw, 18px); font-weight:400; line-height:1.6; color:var(--line,#000000)">Graphic Designer based in Buenos Aires, Argentina.<br>Creating thoughtful visual identities, digital experiences, and editorial design. Available remotely.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:clamp(8px, 1.06cqw, 16px); margin:clamp(20px, 2.1cqw, 32px) 0 0 clamp(16px, 7.9cqw, 120px)">
+      <a href="Work v3.dc.html" style="display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; width:clamp(120px, 11.18cqw, 169px); height:clamp(30px, 2.38cqw, 36px); border:1px solid var(--line,#000000); border-radius:5.5px; background:var(--orange,#FF5B36); color:var(--line,#000000); font-size:clamp(13px, 1.19cqw, 18px); line-height:1" style-hover="background:var(--line,#000000); color:var(--orange,#FF5B36)">Browse My Work</a>
+      <a href="About Me.dc.html" style="display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; width:clamp(120px, 11.18cqw, 169px); height:clamp(30px, 2.38cqw, 36px); border:1px solid var(--line,#000000); border-radius:5.5px; background:transparent; color:var(--line,#000000); font-size:clamp(13px, 1.19cqw, 18px); line-height:1" style-hover="background:var(--line,#000000); color:var(--cream,#F3EFED)">About Me</a>
+      </div>
+    </div>
+  </section>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;punchHoles&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Decoration&quot;},&quot;showWatermark&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Decoration&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      punchHoles: this.props.punchHoles ?? true,
+      showWatermark: this.props.showWatermark ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
